@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Mouse+Memoirs&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+nav{
+    display: flex;
+    background-color: black;
+    color: azure;
+    font-size: 34px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+
+nav ul{
+    list-style: none;
+}
+
+.gameContainer{
+display: flex;
+background-color: white;
+justify-content: center;
+padding: 20px;
+}
+.container{
+margin: 2px;
+display: grid;
+grid-template-columns: repeat(3,12vw);
+grid-template-rows: repeat(3,12vw);
+padding: 0px;
+position: relative;
+}
+.box{
+    border:2px solid black;
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+.box:hover{
+    background-color: rgb(170, 215, 228);
+}
+.gameInfo{
+    padding-left: 40px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+.imgBox img{
+    width:0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right:0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    margin-left:109px;
+    margin-top: 30px;
+    border-radius: 3px;
+    padding: 5px;
+    font-weight: bold;
+    
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+.info{
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color:crimson;
+    margin-left: 70px;
+    margin-top: 150px;
+    
+}
+.line{
+    background-color: rgb(0, 0, 0);
+
+    height: 3px;
+    width:36vw;
+    position: absolute;
+    display: none;
+}
+@media screen and (max-width: 800px)
+{
+.gameContainer{
+    flex-wrap: wrap;
+}
+}
