@@ -4,6 +4,7 @@ let audioTurn=new Audio("menuselect4-36147.mp3")
 let gameOver=new Audio("game-win-sound-effect.mp3")
 let turn="X";
 let isgameOver=false;
+const colorchange=document.getElementsByClassName("bg");
 const changeTurn=()=>{
 return turn==="X"?"0":"X";
 }
@@ -24,17 +25,19 @@ wins.forEach(e =>{
         gameOver.play();
 
         document.querySelector('.info').innerText=btext[e[0]].innerText+" Won";
-        document.querySelector('.imgBox').getElementsByTagName('img')[0].style.width="230px";
+        document.querySelector('.imgBox').getElementsByTagName('img')[0].style.width="290px";
+        colorchange.style.background-colorchange;
+        
         isgameOver=true;
-        let boxtexts=document.querySelectorAll('.boxText')
-        Array.from(boxtexts).forEach(element=>{
+        let boxtexts=document.querySelectorAll('.boxText');
+        // Array.from(boxtexts).forEach(element=>{
             // document.querySelector('.imgBox').getElementsByTagName('img')[0].style.width="230px";
     
             // // element.innerText="";
             // turn="X";
             // isgameOver=false;
             // document.getElementsByClassName("info")[0].innerText= "Turn for " + turn;
-        })
+        // })
     }
 })
 
@@ -42,7 +45,8 @@ wins.forEach(e =>{
 
 
 }
-let boxes=document.getElementsByClassName("box");
+for(let i=0;i<9;i++){
+    let boxes=document.getElementsByClassName("box");
 Array.from(boxes).forEach(element=>{
     let boxtext=element.querySelector('.boxText');
     element.addEventListener('click',()=>{
@@ -56,9 +60,12 @@ if(!isgameOver){
 
 }
 
+
         }
     })
 })
+}
+
 reset.addEventListener('click',()=>{
     // let boxtexts=document.querySelectorAll('.boxText')
     // Array.from(boxtexts).forEach(element=>{
@@ -71,7 +78,7 @@ EraseF();
     
 })
 function EraseF(){
-    if(isgameOver){
+    
         let boxtexts=document.querySelectorAll('.boxText')
         Array.from(boxtexts).forEach(element=>{
             document.querySelector('.imgBox').getElementsByTagName('img')[0].style.width="0px";
@@ -82,5 +89,5 @@ function EraseF(){
             document.getElementsByClassName("info")[0].innerText= "Turn for " + turn;
         })
     }
-}
+
 
