@@ -3,7 +3,9 @@
 *{
     margin: 0px;
     padding: 0px;
+    
 }
+
 nav{
     display: flex;
     background-color: black;
@@ -22,7 +24,7 @@ nav ul{
 
 .gameContainer{
 display: flex;
-background-color: white;
+background-color: khaki;
 justify-content: center;
 padding: 20px;
 }
@@ -48,6 +50,7 @@ align-items: center;
 .gameInfo{
     padding-left: 40px;
     font-family: 'Baloo Bhaina 2', cursive;
+    font-size: xx-large;
 }
 .imgBox img{
     width:0;
@@ -83,6 +86,7 @@ align-items: center;
     color:crimson;
     margin-left: 70px;
     margin-top: 150px;
+    font-size: 40px;
     
 }
 .line{
